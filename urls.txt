@@ -1,0 +1,16 @@
+# Harmless test URLs for easy_phish_detect.py
+# Lines starting with # are ignored. One URL per line.
+# Start the local server first:  python3 -m http.server 8000 --bind 127.0.0.1
+
+# --- Local pages (need bad.html and clean.html in the server folder) ---
+http://127.0.0.1:8000/bad.html
+http://127.0.0.1:8000/clean.html
+
+# --- Reserved test domains (never resolve to real sites) ---
+http://user@bad-site.example/login
+http://secure-login-account-verify-update.example/signin/confirm/identity/password/reset
+https://my-bank.test/login
+https://example.com/login
+
+# --- Clean baseline ---
+https://example.com
