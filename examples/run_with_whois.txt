@@ -1,0 +1,91 @@
+
+Scanning: http://127.0.0.1:8000/bad.html
+========================================
+1. Uses IP in URL:        YES
+2. Contains '@' symbol:   NO
+3. URL length > 75:       NO
+4. Hyphen in domain:      NO
+5. Uses HTTPS:            NO
+6. Domain age:            N/A (IP address)
+7. Suspicious mailto form: could not check (Host unreachable)
+----------------------------------------
+Indicators: 2  ->  Medium  (IP in URL, No HTTPS)
+========================================
+
+Scanning: http://127.0.0.1:8000/clean.html
+========================================
+1. Uses IP in URL:        YES
+2. Contains '@' symbol:   NO
+3. URL length > 75:       NO
+4. Hyphen in domain:      NO
+5. Uses HTTPS:            NO
+6. Domain age:            N/A (IP address)
+7. Suspicious mailto form: could not check (Host unreachable)
+----------------------------------------
+Indicators: 2  ->  Medium  (IP in URL, No HTTPS)
+========================================
+
+Scanning: http://user@bad-site.example/login
+========================================
+1. Uses IP in URL:        NO
+2. Contains '@' symbol:   YES
+3. URL length > 75:       NO
+4. Hyphen in domain:      YES
+5. Uses HTTPS:            NO
+6. Domain age:            Unknown (no creation date; WHOIS may hide it)
+7. Suspicious mailto form: could not check (Host unreachable)
+----------------------------------------
+Indicators: 3  ->  High  (@ symbol, Hyphen in domain, No HTTPS)
+========================================
+
+Scanning: http://secure-login-account-verify-update.example/signin/confirm/identity/password/reset
+========================================
+1. Uses IP in URL:        NO
+2. Contains '@' symbol:   NO
+3. URL length > 75:       YES
+4. Hyphen in domain:      YES
+5. Uses HTTPS:            NO
+6. Domain age:            Unknown (no creation date; WHOIS may hide it)
+7. Suspicious mailto form: could not check (Host unreachable)
+----------------------------------------
+Indicators: 3  ->  High  (URL longer than 75, Hyphen in domain, No HTTPS)
+========================================
+
+Scanning: https://my-bank.test/login
+========================================
+1. Uses IP in URL:        NO
+2. Contains '@' symbol:   NO
+3. URL length > 75:       NO
+4. Hyphen in domain:      YES
+5. Uses HTTPS:            YES
+6. Domain age:            Unknown (no creation date; WHOIS may hide it)
+7. Suspicious mailto form: could not check (Host unreachable)
+----------------------------------------
+Indicators: 1  ->  Low  (Hyphen in domain)
+========================================
+
+Scanning: https://example.com/login
+========================================
+1. Uses IP in URL:        NO
+2. Contains '@' symbol:   NO
+3. URL length > 75:       NO
+4. Hyphen in domain:      NO
+5. Uses HTTPS:            YES
+6. Domain age:            Registered (creation date found)
+7. Suspicious mailto form: NO
+----------------------------------------
+Indicators: 0  ->  No indicators
+========================================
+
+Scanning: https://example.com
+========================================
+1. Uses IP in URL:        NO
+2. Contains '@' symbol:   NO
+3. URL length > 75:       NO
+4. Hyphen in domain:      NO
+5. Uses HTTPS:            YES
+6. Domain age:            Registered (creation date found)
+7. Suspicious mailto form: NO
+----------------------------------------
+Indicators: 0  ->  No indicators
+========================================
